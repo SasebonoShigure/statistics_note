@@ -20,7 +20,7 @@
     - $X_1,\cdots,X_n\sim N(\mu,\sigma^2), i.i.d.,\Sigma X_i\sim N(n\mu,n\sigma^2),\bar X \sim N(\mu,\frac{\sigma^2}{n})$
 - 均匀分布， $X\sim U[a,b]$
   - $E(x)=\frac{1}{b-a} , Var(x)=\frac{(b-a)^2}{12}$
-  - MLE: $\hat a=\min\limits_{_1\leq i\leq n} x_i,\hat b=\max\limits_{_1\leq i\leq n} x_i$
+  - MLE: $\hat a=\min\limits_{1\leq i\leq n} x_i,\hat b=\max\limits_{1\leq i\leq n} x_i$
   - 对于 $X_i \sim U[0,\theta]$ ，矩估计： $\tilde\theta=2\bar x$
 - 卡方分布
   - $X_1,\cdots,X_n\sim N(0,1), i.i.d.,\Sigma_{i=1}^nX_i^2\sim\chi^2(n)$
@@ -43,7 +43,7 @@
 - 均方误差
   - $M_\theta(\varphi)=E_\theta[\varphi(X_1,\cdots,X_n)-g(\theta)]^2$
 - 充分统计量
-  - 称 $ \varphi(X_1 ,\cdots,X_n)$ 为 $g(\theta)$ 的充分统计量，若：$L(x_1,\cdots,x_n;\theta)$ 可表示为 $q[\varphi(x_1 ,\cdots,x_n),g(\theta)]\cdot h(x)$
+  - 称 $ \varphi(X_1 ,\cdots ,X_n)$ 为 $g(\theta)$ 的充分统计量，若：$L(x_1,\cdots ,x_n;\theta)$ 可表示为 $q[\varphi(x_1 ,\cdots,x_n),g(\theta)]\cdot h(x)$
 - 指数型分布
   - 称 $X$ 服从指数型分布，若 $f(x;\theta)=S(\theta)h(x)\exp\{\Sigma_{j=1}^k C_j(\theta)T_j(x)\}$
   - 此时似然函数为 $L(x_1,\cdots,x_n;\theta)=S(\theta)^n\prod h(x_i)\exp\{ \Sigma_{j=1}^k C_j(\theta)\Sigma_{i=1}^nT_j(x_i) \}$
