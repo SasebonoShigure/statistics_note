@@ -45,7 +45,7 @@
 - 充分统计量
   - 称$ \varphi(X_1 ,\cdots,X_n)$ 为 $g(\theta)$ 的充分统计量，若：$L(x_1,\cdots,x_n;\theta)$ 可表示为 $q[\varphi(x_1 ,\cdots,x_n),g(\theta)]\cdot h(x)$
 - 指数型分布
-  - 称 $X$ 服从指数型分布，若 $f(x;\theta)=S(\theta)h(x)\exp\{ \Sigma_{j=1}^k C_j(\theta)T_j(x) \}$
+  - 称 $X$ 服从指数型分布，若 $f(x;\theta)=S(\theta)h(x)\exp\{\Sigma_{j=1}^k C_j(\theta)T_j(x)\}$
   - 此时似然函数为$L(x_1,\cdots,x_n;\theta)=S(\theta)^n\prod h(x_i)\exp\{ \Sigma_{j=1}^k C_j(\theta)\Sigma_{i=1}^nT_j(x_i) \}$
   - 此时 $(\Sigma_{i=1}^nT_1(x_i),\cdots,\Sigma_{i=1}^nT_k(x_i))$ 是 $\theta$ 的一个充分统计量
 - 完全统计量
@@ -76,6 +76,6 @@
   - 定理：
     - $X_1,\cdots,X_n\sim N(\mu,\sigma^2), i.i.d.,\frac{1}{\sigma^2}\Sigma_{i=1}^n(X_i-\bar X)^2\sim\chi^2(n-1)$
     - 上述$\bar X$ 与 $\Sigma_{i=1}^n(X_i-\bar X)^2$ 独立
-  - $T=\frac{\bar X-\mu}{\sqrt{S^2/n}}=\frac{\sqrt n(\bar X-\mu)/\sigma}{\sqrt{\frac{1}{(n-1)\sigma^2}\Sigma_{i=1}^n(X_i-\bar X)^2}} $ ，且分子分母独立，此时 $T=\frac{\bar X-\mu}{\sqrt{S^2/n}}\sim t(n-1)$
+  - $T=\frac{\bar X-\mu}{\sqrt{S^2/n}}=\frac{\sqrt n(\bar X-\mu)/\sigma}{\sqrt{\frac{1}{(n-1)\sigma^2}\Sigma_{i=1}^n(X_i-\bar X)^2}}$ ，且分子分母独立，此时 $T=\frac{\bar X-\mu}{\sqrt{S^2/n}}\sim t(n-1)$
 - 未知 $\mu$ ，求 $\sigma^2$ 置信区间
   - $Y=:\frac{(n-1)S^2}{\sigma^2}=\frac{\Sigma_{i=1}^n(X_i-\bar X)^2}{\sigma^2}\sim\chi^2(n-1)$
