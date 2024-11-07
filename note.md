@@ -39,3 +39,20 @@
 - C-R不等式
   - $ Var_\theta(\phi(X_1,\cdots,X_n))\geq\frac{(g(\theta)')^2}{nI(\theta)} $，其中Fisher信息量 $ I(\theta)=E_\theta(\frac{\partial \log f(x;\theta)}{\partial\theta})^2 $
   - 要求 $X$ 的支撑 $ E=:\{ x:f(x;\theta)>0 \} $ 与 $\theta$ 无关
+
+## 第三章
+
+### 定义
+
+- 第I类错误： $H_0$ 真， $\varphi$ 否认 $H_0$
+- 第II类错误： $H_0$ 假， $\varphi$ 不否认 $H_0$
+- 功效函数 $\beta_\varphi(\theta)=:E_\theta\varphi(X)$
+  - $\theta\in\Theta_0$ 时， 第I类错误概率为 $\beta_\varphi(\theta)$
+  - $\theta\notin\Theta_0$ 时， 第II类错误概率为 $1-\beta_\varphi(\theta)$
+- 称 $\varphi$ 是水平为 $\alpha$ 的检验法， 若 $\sup\{\beta_\varphi(\theta):\theta\in\Theta_0\}\leq\alpha$ ，即第I类错误不超过 $\alpha$ 
+- 一致最大功效（UMP）检验：称 $\varphi$ 是水平为 $\alpha$ 的UMP检验，如果 $\varphi$ 水平为 $\alpha$ ，且对于任一检验水平为 $\alpha$ 的检验法 $\psi$ ， $\beta_\varphi(\theta)\geq\beta_\psi(\theta),\forall\theta\in\Theta\backslash\Theta_0$ ，即水平为 $\alpha$ 的检验法中第II类错误最小的
+- 无偏检验：称 $\varphi$ 是水平为 $\alpha$ 的无偏检验，若对于 $\forall\theta\in\Theta\backslash\Theta_0$ ， $\beta_\varphi(\theta)\geq\alpha$
+- 一致最大功效无偏（UMPU）检验： 无偏检验中第II类错误最小的
+
+### 似然比检验法
+
