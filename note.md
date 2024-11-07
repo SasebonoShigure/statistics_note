@@ -93,6 +93,17 @@
 - 一致最大功效（UMP）检验：称 $\varphi$ 是水平为 $\alpha$ 的UMP检验，如果 $\varphi$ 水平为 $\alpha$ ，且对于任一检验水平为 $\alpha$ 的检验法 $\psi$ ， $\beta_\varphi(\theta)\geq\beta_\psi(\theta),\forall\theta\in\Theta\backslash\Theta_0$ ，即水平为 $\alpha$ 的检验法中第II类错误最小的
 - 无偏检验：称 $\varphi$ 是水平为 $\alpha$ 的无偏检验，若对于 $\forall\theta\in\Theta\backslash\Theta_0$ ， $\beta_\varphi(\theta)\geq\alpha$
 - 一致最大功效无偏（UMPU）检验： 无偏检验中第II类错误最小的
+- N-P引理：给定 $0\leq\alpha\leq 1$ ， 设
+  $$W_0=\{x:L\}$$
 
 ### 似然比检验法
 
+- $\Theta=\{\theta_1,\theta_2\},\Theta_0=\{\theta_1\}$
+
+  $$\begin{array}{lll}
+    H_0:\theta=\theta_1 & \leftrightarrow & H_0:\theta=\theta_2
+  \end{array}$$
+
+  称 $\lambda(x)=L(x,\theta_2)/L(x,\theta_1)$ 为似然比
+  - N-P引理：给定 $0\leq\alpha\leq 1$ ， 设
+  $$W_0=\{x:L\}$$
