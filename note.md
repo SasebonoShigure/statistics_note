@@ -93,17 +93,91 @@
 - 一致最大功效（UMP）检验：称 $\varphi$ 是水平为 $\alpha$ 的UMP检验，如果 $\varphi$ 水平为 $\alpha$ ，且对于任一检验水平为 $\alpha$ 的检验法 $\psi$ ， $\beta_\varphi(\theta)\geq\beta_\psi(\theta),\forall\theta\in\Theta\backslash\Theta_0$ ，即水平为 $\alpha$ 的检验法中第II类错误最小的
 - 无偏检验：称 $\varphi$ 是水平为 $\alpha$ 的无偏检验，若对于 $\forall\theta\in\Theta\backslash\Theta_0$ ， $\beta_\varphi(\theta)\geq\alpha$
 - 一致最大功效无偏（UMPU）检验： 无偏检验中第II类错误最小的
-- N-P引理：给定 $0\leq\alpha\leq 1$ ， 设
-  $$W_0=\{x:L\}$$
+- 单参数指数型分布： 若 $X$ 的密度函数可表示为
+
+  $$f(x,\theta)=S(\theta)h(x)e^{Q(\theta)V(x)}$$
+
+  其中 $S(\theta)>0,h(x)>0,Q(\theta)$ 是 $\theta$ 的严格增函数，则称 $X$ 服从单参数指数型分布
+  二项分布、指数分布、Poisson分布、一个参数已知的正态分布等皆为单参数指数型分布
+  记 $t(X_1,\cdots,X_n)=t(X)=\Sigma_{i=1}^{n}V(X_i)$ 易知其为充分统计量
 
 ### 似然比检验法
 
 - $\Theta=\{\theta_1,\theta_2\},\Theta_0=\{\theta_1\}$
 
   $$\begin{array}{lll}
-    H_0:\theta=\theta_1 & \leftrightarrow & H_0:\theta=\theta_2
+    H_0:\theta=\theta_1 & \leftrightarrow & H_1:\theta=\theta_2
   \end{array}$$
 
   称 $\lambda(x)=L(x,\theta_2)/L(x,\theta_1)$ 为似然比
   - N-P引理：给定 $0\leq\alpha\leq 1$ ， 设
-  $$W_0=\{x:L\}$$
+
+    $$W_0=\{x:L(x,\theta_2)>\lambda_0 L(x,\theta_1)\}$$
+
+    $$\varphi_0(x)=\begin{cases}
+      1 & \lambda(x)>\lambda_0(x) \\
+      0 & 否则
+    \end{cases}$$
+
+    其中 $\lambda_0$ 满足 $E_{\theta_1}\varphi_0(x)=\beta_{\varphi_0}(\theta_1)=\alpha$ ， $\varphi_0$ UMP，无偏
+- $X$ 服从单参数指数型分布
+  - $\begin{array}{lll}
+    H_0:\theta\leq\theta_1 & \leftrightarrow & H_1:\theta>\theta_2
+    \end{array}$
+    若存在 $C$ 满足 $P_{\theta_1}(\Sigma_{i=1}^{n}V(X_i))=\alpha$ 则UMP检验为
+
+    $$\varphi_0(x)=\begin{cases}
+      1 & \Sigma_{i=1}^{n}V(X_i)>C \\
+      0 & 否则
+    \end{cases}$$
+
+  - $\begin{array}{lll}
+    H_0:\theta\notin(\theta_1,\theta_2) & \leftrightarrow & H_1:\theta\in(\theta_1,\theta_2)
+    \end{array}$
+    若存在 $C_1<C_2$ 满足 $\begin{array}{ll}
+    \beta_{\varphi_0}(\theta_i)=\alpha & (i=1,2)
+    \end{array}$ 则UMP检验为
+
+    $$\varphi_0(x)=\begin{cases}
+      1 & C_1<\Sigma_{i=1}^{n}V(X_i)<C_2 \\
+      0 & 否则
+    \end{cases}$$
+
+  - $\begin{array}{lll}
+    H_0:\theta\in[\theta_1,\theta_2] & \leftrightarrow & H_1:\theta\notin[\theta_1,\theta_2]
+    \end{array}$
+    若存在 $C_1<C_2$ 满足 $\begin{array}{ll}
+    \beta_{\varphi_0}(\theta_i)=\alpha & (i=1,2)
+    \end{array}$ 则UMPU检验为
+
+    $$\varphi_0(x)=\begin{cases}
+      1 & \Sigma_{i=1}^{n}V(X_i)<C_1 或 \Sigma_{i=1}^{n}V(X_i)>C_2 \\
+      0 & 否则
+    \end{cases}$$
+
+  - $\begin{array}{lll}
+    H_0:\theta=\theta_0 & \leftrightarrow & H_1:\theta\neq\theta_0
+    \end{array}$
+    若存在 $C_1<C_2$ 满足
+    1. $\beta_{\varphi_0}(\theta_0)=\alpha$
+    2. $E_{\theta_0}(\varphi_0(X_1,\cdots,X_n)\Sigma_{i=1}^{n}V(X_i))=\alpha E_{\theta_0}(\Sigma_{i=1}^{n}V(X_i))$
+    则UMPU检验为
+
+    $$\varphi_0(x)=\begin{cases}
+      1 & \Sigma_{i=1}^{n}V(X_i)<C_1 或 \Sigma_{i=1}^{n}V(X_i)>C_2 \\
+      0 & 否则
+    \end{cases}$$
+
+    有对称性时，有时第一个条件蕴含第二个条件
+  
+### 广义似然比检验法
+
+- 称 $\lambda(x)=\frac{\sup\{L(x,\theta):\theta\in\Theta\}}{\sup\{L(x,\theta):\theta\in\Theta_0\}}$ 为广义似然比。
+- 广义似然比检验法：满足 $\sup\{\beta_{\varphi_0}(\theta):\theta\in\Theta_0\}=\alpha$ 的检验法
+
+  $$\varphi_0(x)=\begin{cases}
+    1 & \lambda(x)>\lambda_0(x) \\
+    0 & 否则
+  \end{cases}$$
+
+  - 若 $t(x)$ 是
