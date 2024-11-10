@@ -27,6 +27,10 @@
   - $E(x)=\frac{1}{b-a} , Var(x)=\frac{(b-a)^2}{12}$
   - MLE: $\hat a=\min\limits_{1\leq i\leq n} x_i,\hat b=\max\limits_{1\leq i\leq n} x_i$
   - 对于 $X_i \sim U[0,\theta]$ ，矩估计： $\tilde\theta=2\bar x$
+- 泊松分布
+  - $X\sim P(\lambda)=\frac{\lambda^k}{k!}e^{-\lambda}$
+  - $E(X)=\lambda,Var(x)=\lambda$
+  - $X_1,\cdots,X_n\sim P(\lambda),i.i.d.,\Sigma X_i\sim P(n\lambda)$
 - 卡方分布
   - $X_1,\cdots,X_n\sim N(0,1), i.i.d.,\Sigma_{i=1}^nX_i^2\sim\chi^2(n)$
   - $\chi^2(n)=\Gamma(\frac n 2,\frac1 2)$
