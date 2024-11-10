@@ -167,13 +167,13 @@
 - $X$ 服从单参数指数型分布
   - $\begin{array}{lll}
     H_0:\theta\leq\theta_1 & \leftrightarrow & H_1:\theta>\theta_2
-    \end{array}$
+    \end{array}$ 
     若存在 $C$ 满足 $P_{\theta_1}(\Sigma_{i=1}^{n}V(X_i))=\alpha$ 则UMP检验为
 
     $$\varphi_0(x)=\begin{cases}
       1 & \Sigma_{i=1}^{n}V(X_i)>C \\
       0 & 否则
-    \end{cases}$$
+    \end{cases}$$ 
 
   - $\begin{array}{lll}
     H_0:\theta\notin(\theta_1,\theta_2) & \leftrightarrow & H_1:\theta\in(\theta_1,\theta_2)
