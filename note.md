@@ -65,7 +65,7 @@
 - 指数型分布
   - 称 $X$ 服从指数型分布，若 $f(x;\theta)=S(\theta)h(x)\exp\{\Sigma_{j=1}^k C_j(\theta)T_j(x)\}$
   - 此时似然函数为 $L(x_1,\cdots,x_n;\theta)=S(\theta)^n\prod h(x_i)\exp\{ \Sigma_{j=1}^k C_j(\theta)\Sigma_{i=1}^nT_j(x_i) \}$
-  - 此时 $(\Sigma_{i=1}^nT_1(x_i),\cdots,\Sigma_{i=1}^nT_k(x_i))$ 是 $\theta$ 的一个充分统计量
+  - 此时 $(\Sigma_{i=1}^nT_1(x_i),\cdots,\Sigma_{i=1}^nT_k(x_i))$ 是 $\theta$ 的一个充分统计量，也是完全统计量。
 - 完全统计量
   - 称 $\varphi(X_1 ,\cdots,X_n)$ 为 $g(\theta)$ 的完全统计量，若对任意函数 $u(\cdot)$ ，若 $E_\theta[u(\varphi(X_1,\cdots,X_n))]=0,\forall \theta\in\Theta$ ，则有 $u(\varphi(X_1,\cdots,X_n))\equiv0,\forall \theta\in\Theta$
 - 一致最小方差无偏估计
@@ -77,7 +77,9 @@
 
 ### 常用公式
 
-- $\Sigma(x_i-\bar x^2) = \Sigma x_i^2 -n\bar x^2$
+- $\Sigma(x_i-\bar x)^2 = \Sigma x_i^2 -n\bar x^2$
+- $\Sigma(x_i-\mu)^2 = \Sigma (x_i-\bar x)^2 +n(\bar x-\mu)^2$
+- $X\sim N(0,1),E(X^4)=3;X\sim N(0,\sigma^2),E(X^4)=3\sigma^4$
   
 
 ### 置信区间
